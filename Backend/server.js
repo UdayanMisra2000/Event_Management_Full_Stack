@@ -5,7 +5,7 @@ import mongoose from 'mongoose'
 import userRouter from './Routes/Users.js';
 import eventRouter from './Routes/Events.js';
 import cookieParser from 'cookie-parser'
-import authMiddleware from './AuthMiddleware.js';
+import authMiddleware from './authMiddleware.js';
 import cors from 'cors'
 app.use(cors(
     {
