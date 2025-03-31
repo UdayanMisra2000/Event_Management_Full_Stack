@@ -1,0 +1,53 @@
+/* UpdateUserPage.css */
+
+.update-user-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .update-user-page h2 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .update-user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .update-user-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .update-user-form input {
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .save-button {
+    width: 100px;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    align-self: flex-end; /* moves button to the right side */
+  }
+  
+  .save-button:hover {
+    background-color: #0056b3;
+  }
+  
