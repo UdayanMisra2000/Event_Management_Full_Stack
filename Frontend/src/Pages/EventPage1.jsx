@@ -20,7 +20,7 @@ const EventPage1 = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:5000/events/createEvent", {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/createEvent`, {
                 method: "POST",
                 headers: { 
                     "Content-Type": "application/json",

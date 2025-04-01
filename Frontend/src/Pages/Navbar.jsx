@@ -7,7 +7,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       // Call the backend logout API
-      const response = await fetch("http://localhost:5000/logout", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/logout`, {
         method: "POST",
         credentials: "include", // Include cookies if needed
         headers: {

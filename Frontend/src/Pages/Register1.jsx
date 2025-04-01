@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PasswordValidator from 'password-validator';
 import { useNavigate } from 'react-router-dom';
 
+
 // Password validation schema
 const passwordSchema = new PasswordValidator();
 passwordSchema
@@ -70,7 +71,7 @@ function Register() {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/users/register", {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/users/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

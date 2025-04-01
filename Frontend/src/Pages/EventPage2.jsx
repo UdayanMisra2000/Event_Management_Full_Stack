@@ -15,7 +15,7 @@ const EventPage2 = () => {
     useEffect(() => {
         const fetchEventData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/events/getEvent/${id}`, {
+                const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/getEvent/${id}`, {
                     method: "GET",
                     headers: { 
                         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const EventPage2 = () => {
             return;
         }
         try {
-            const response = await fetch(`http://localhost:5000/events/updateEvent/${id}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/updateEvent/${id}`, {
                 method: "PUT",
                 headers: { 
                     "Content-Type": "application/json",

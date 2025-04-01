@@ -45,7 +45,7 @@ const EventPage = () => {
 
   const fetchUserEvents = async () => {
     try {
-      const res = await fetch("http://localhost:5000/events/getEventsCreatedByUser", {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/getEventsCreatedByUser`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -78,7 +78,7 @@ const EventPage = () => {
 
   const handleToggleActive = async (eventId, currentValue) => {
     try {
-      const res = await fetch(`http://localhost:5000/events/toggleActive/${eventId}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/toggleActive/${eventId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -103,7 +103,7 @@ const EventPage = () => {
   const handleDelete = async (eventId) => {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
     try {
-      const res = await fetch(`http://localhost:5000/events/deleteEvent/${eventId}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/deleteEvent/${eventId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

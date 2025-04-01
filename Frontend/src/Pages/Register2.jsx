@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./Register2.css";
+import img1 from "../Images/Login.png";
 
 // The same categories in my schema
 const categories = [
@@ -36,7 +37,7 @@ export default function Register2() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/users/registerWithUsername/${id}/${email}`,
+        `${process.env.REACT_APP_API_BASE_URL}/users/registerWithUsername/${id}/${email}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -109,7 +110,7 @@ export default function Register2() {
       <div className="register2-image-section">
         {/* Replace the src with your own image URL */}
         <img
-          src="https://images.pexels.com/photos/3807693/pexels-photo-3807693.jpeg"
+          src={img1}
           alt="Right side"
         />
       </div>

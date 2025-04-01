@@ -12,7 +12,7 @@ const Availability = () => {
   useEffect(() => {
     const fetchAvailability = async () => {
       try {
-        const res = await fetch("http://localhost:5000/users/availability", {
+        const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/users/availability`, {
           method: "GET",
           headers: { 
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -47,7 +47,7 @@ const Availability = () => {
         return acc;
       }, {});
       console.log("Updating availability:", availabilityObj); // Debug log
-      const res = await fetch("http://localhost:5000/users/availability", {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/users/availability`, {
         method: "PUT",
         headers: { 
             Authorization: `Bearer ${localStorage.getItem("token")}`,
