@@ -19,7 +19,7 @@ const UpdateUserPage = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/users/${id}`, {
+        const response = await fetch(`https://event-management-full-stack-2.onrender.com/users/${id}`, { 
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const UpdateUserPage = () => {
 
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/users/updateRegister/${id}`,
+        `https://event-management-full-stack-2.onrender.com/users/updateRegister/${id}`,
         {
           method: "PUT",
           headers: {
@@ -93,7 +93,7 @@ const UpdateUserPage = () => {
       } else {
         alert("User updated successfully");
         // Navigate away or refresh
-        navigate("/profile"); // or wherever you want to go after updating
+        navigate("/user/event");
       }
     } catch (error) {
       console.error("Error updating user:", error);

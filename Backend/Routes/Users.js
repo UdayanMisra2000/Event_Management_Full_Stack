@@ -10,7 +10,7 @@ userRouter.put('/registerWithUsername/:id/:email', registerWithUsername);
 userRouter.get('/getUser/:id', authMiddleware, getUserById);
 userRouter.post('/login', login);
 userRouter.post('/logout', logout); 
-userRouter.get('/availability', authMiddleware, getAvailability);
-userRouter.put('/availability', authMiddleware, updateAvailability);
+userRouter.get('/getAvailability', authMiddleware, getAvailability);
+userRouter.put('/updateAvailability', authMiddleware, updateAvailability);
 
 export default userRouter;

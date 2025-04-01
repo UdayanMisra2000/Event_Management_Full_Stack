@@ -37,7 +37,7 @@ export default function Register2() {
 
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/users/registerWithUsername/${id}/${email}`,
+        `https://event-management-full-stack-2.onrender.com/users/registerWithUsername/${id}/${email}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -55,7 +55,7 @@ export default function Register2() {
       // If successful
       alert("User updated successfully!");
       localStorage.setItem("token", data.accessToken); // Save token to local storage
-      navigate("/create-event"); // Redirect to create event page
+      navigate("/user/event"); // Redirect to create event page
     } catch (err) {
       console.error(err);
       setError("Server error. Please try again later.");

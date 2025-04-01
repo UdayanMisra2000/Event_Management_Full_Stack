@@ -25,7 +25,7 @@ const BookingPage = () => {
     setError(null); // Clear previous errors
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/events/myEvents?tab=${activeTab}`,
+        `https://event-management-full-stack-2.onrender.com/events/myEvents?tab=${activeTab}`,
         {
           method: "GET",
           headers: {
@@ -52,7 +52,7 @@ const BookingPage = () => {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/events/accept/${eventId}`,
+        `https://event-management-full-stack-2.onrender.com/events/accept/${eventId}`,
         {
           method: "PUT",
           headers: {
@@ -80,7 +80,7 @@ const BookingPage = () => {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/events/reject/${eventId}`,
+        `https://event-management-full-stack-2.onrender.com/events/reject/${eventId}`,
         {
           method: "PUT",
           headers: {

@@ -45,7 +45,7 @@ const EventPage = () => {
 
   const fetchUserEvents = async () => {
     try {
-      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/getEventsCreatedByUser`, {
+      const res = await fetch(`https://event-management-full-stack-2.onrender.com/events/getEventsCreatedByUser`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -78,7 +78,7 @@ const EventPage = () => {
 
   const handleToggleActive = async (eventId, currentValue) => {
     try {
-      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/toggleActive/${eventId}`, {
+      const res = await fetch(`https://event-management-full-stack-2.onrender.com/events/toggleActive/${eventId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -97,13 +97,13 @@ const EventPage = () => {
   };
 
   const handleEdit = (eventId) => {
-    navigate("/create-event");
+    navigate(`/user/update-event/${eventId}`);
   };
 
   const handleDelete = async (eventId) => {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
     try {
-      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/deleteEvent/${eventId}`, {
+      const res = await fetch(`https://event-management-full-stack-2.onrender.com/events/deleteEvent/${eventId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

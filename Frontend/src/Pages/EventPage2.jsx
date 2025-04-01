@@ -15,7 +15,7 @@ const EventPage2 = () => {
     useEffect(() => {
         const fetchEventData = async () => {
             try {
-                const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/getEvent/${id}`, {
+                const response = await fetch(`https://event-management-full-stack-2.onrender.com/events/getEvent/${id}`, {
                     method: "GET",
                     headers: { 
                         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const EventPage2 = () => {
             return;
         }
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/updateEvent/${id}`, {
+            const response = await fetch(`https://event-management-full-stack-2.onrender.com/events/updateEvent/${id}`, {
                 method: "PUT",
                 headers: { 
                     "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const EventPage2 = () => {
             const data = await response.json();
             if (response.ok) {
                 alert("Event updated successfully");
-                navigate("/book-event"); // Redirect to book event page
+                navigate("/user/event");
             } else {
                 alert(data.message || "Something went wrong");
             }

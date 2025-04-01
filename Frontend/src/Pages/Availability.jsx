@@ -33,7 +33,7 @@ const Availability = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/myEvents?tab=all`, {
+      const response = await fetch(`https://event-management-full-stack-2.onrender.com/events/myEvents?tab=all`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

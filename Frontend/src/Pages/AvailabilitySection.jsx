@@ -12,26 +12,26 @@ const Availability = () => {
   useEffect(() => {
     const fetchAvailability = async () => {
       try {
-        const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/users/availability`, {
+        const res = await fetch(`https://event-management-full-stack-2.onrender.com/users/getAvailability`, {
           method: "GET",
           headers: { 
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-            "Content-Type": "application/json" 
+            "Content-Type": "application/json" ,
+            Authorization: `Bearer ${localStorage.getItem("token")}`
         },
-          credentials: "include", // Ensure cookies are sent for authentication
+          credentials: "include", 
         });
         if (!res.ok) {
           throw new Error(`Failed to fetch availability: ${res.statusText}`);
         }
         const data = await res.json();
-        console.log("Fetched availability:", data); // Debug log
+        console.log("Fetched availability:", data);
         const newAvailability = daysOfWeek.map((day) => ({
           day,
-          times: data.availability[day] || [], // Ensure fallback for missing days
+          times: data.availability[day] || [], 
         }));
         setAvailability(newAvailability);
       } catch (err) {
-        console.error("Error fetching availability:", err.message); // Debug log
+        console.error("Error fetching availability:", err.message);
         setError(err.message);
       }
     };
@@ -39,15 +39,14 @@ const Availability = () => {
     fetchAvailability();
   }, []);
 
-  // Helper to update backend with the full availability object
   const updateAvailabilityAPI = async (newAvailability) => {
     try {
       const availabilityObj = newAvailability.reduce((acc, { day, times }) => {
         acc[day] = times;
         return acc;
       }, {});
-      console.log("Updating availability:", availabilityObj); // Debug log
-      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/users/availability`, {
+      console.log("Updating availability:", availabilityObj); 
+      const res = await fetch(`https://event-management-full-stack-2.onrender.com/users/updateAvailability`, {
         method: "PUT",
         headers: { 
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -60,10 +59,10 @@ const Availability = () => {
         throw new Error(`Failed to update availability: ${res.statusText}`);
       }
       const data = await res.json();
-      console.log("Updated availability response:", data); // Debug log
+      console.log("Updated availability response:", data); 
       return data;
     } catch (err) {
-      console.error("Error updating availability:", err.message); // Debug log
+      console.error("Error updating availability:", err.message); 
       setError(err.message);
     }
   };

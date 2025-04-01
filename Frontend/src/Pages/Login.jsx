@@ -24,7 +24,7 @@ function Login() {
     }
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/users/login`, {
+      const response = await fetch(`https://event-management-full-stack-2.onrender.com/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +40,7 @@ function Login() {
       } else {
         alert(data.message); 
         localStorage.setItem("token", data.accessToken); // Save token to local storage
-        navigate("/event"); // Redirect to dashboard
+        navigate("/user/event"); // Redirect to dashboard
       }
     } catch (err) {
       console.error(err);

@@ -20,7 +20,7 @@ const EventPage1 = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/events/createEvent`, {
+            const response = await fetch(`https://event-management-full-stack-2.onrender.com/events/createEvent`, {
                 method: "POST",
                 headers: { 
                     "Content-Type": "application/json",
@@ -32,7 +32,7 @@ const EventPage1 = () => {
 
             const data = await response.json();
             if (response.ok) {
-                navigate(`/create-event/${data.event._id}`);
+                navigate(`/user/create-event/${data.event._id}`);
             } else {
                 alert(data.message || "Something went wrong");
             }

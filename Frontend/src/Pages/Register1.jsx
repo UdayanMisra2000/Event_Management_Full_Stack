@@ -70,8 +70,10 @@ function Register() {
             return;
         }
 
+        console.log("API URL:", `https://event-management-full-stack-2.onrender.com/users/register`);
+
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/users/register`, {
+            const response = await fetch(`https://event-management-full-stack-2.onrender.com/users/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

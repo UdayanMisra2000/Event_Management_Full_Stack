@@ -7,7 +7,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       // Call the backend logout API
-      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/logout`, {
+      const response = await fetch(`https://event-management-full-stack-2.onrender.com/users/logout`, {
         method: "POST",
         credentials: "include", // Include cookies if needed
         headers: {
@@ -19,7 +19,7 @@ const Navbar = () => {
         // Remove token from localStorage
         localStorage.removeItem("token");
         // Navigate to the home page
-        navigate("/home");
+        navigate("/");
       } else {
         console.error("Failed to log out");
       }
@@ -46,21 +46,21 @@ const Navbar = () => {
       <div>
         <h2 style={{ margin: "1rem" }}>CNNCT</h2>
         <nav style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          <button style={navButtonStyle} onClick={() => navigate("/event")}>
+          <button style={navButtonStyle} onClick={() => navigate("/user/event")}>
             Events
           </button>
-          <button style={navButtonStyle} onClick={() => navigate("/book-event")}>
+          <button style={navButtonStyle} onClick={() => navigate("/user/book-event")}>
             Booking
           </button>
-          <button style={navButtonStyle} onClick={() => navigate("/availability")}>
+          <button style={navButtonStyle} onClick={() => navigate("/user/availability")}>
             Availability
           </button>
-          <button style={navButtonStyle} onClick={() => navigate("/settings")}>
+          <button style={navButtonStyle} onClick={() => navigate("/user/settings")}>
             Settings
           </button>
           <button
             style={{ ...navButtonStyle, backgroundColor: "#007bff", color: "#fff" }}
-            onClick={() => navigate("/create-event")}
+            onClick={() => navigate("/user/create-event")}
           >
             + Create
           </button>
