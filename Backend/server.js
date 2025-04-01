@@ -9,7 +9,7 @@ import authMiddleware from './authMiddleware.js';
 import cors from 'cors'
 app.use(cors(
     {
-        origin: ['https://event-management-mern-10.netlify.app'],
+        origin: ['https://event-management-full-stack.netlify.app'],
         credentials: true,
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type', 'Authorization']
