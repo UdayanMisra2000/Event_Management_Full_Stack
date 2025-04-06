@@ -159,6 +159,23 @@ Make sure all `fetch()` URLs in frontend are relative to `REACT_APP_API_BASE_URL
 
 ![Backend Structure](./path-to-screenshot-folder/Screenshot1.png)
 ![Backend Structure](./path-to-screenshot-folder/Screenshot2.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot3.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot4.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot5.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot6.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot7.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot8.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot9.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot10.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot11.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot12.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot14.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot15.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot16.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot17.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot18.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot19.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot20.png)
 
 ---
 
