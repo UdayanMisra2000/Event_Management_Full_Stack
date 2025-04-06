@@ -157,7 +157,7 @@ Make sure all `fetch()` URLs in frontend are relative to `REACT_APP_API_BASE_URL
 
 ## 📷 Screenshot Preview
 
-![Backend Structure](./path-to-screenshot-folder/Screenshot%2025-04-06%212343.png)
+![Backend Structure](./path-to-screenshot-folder/Screenshot1.png)
 
 ---
 
