@@ -41,7 +41,7 @@ Backend/
 ```bash
 cd Backend
 npm install
-npm run devStart
+npm run start
 ```
 
 #### 🌍 Environment Variables Required
