@@ -56,7 +56,7 @@ const EventPage1 = () => {
                     <option>3 hours</option>
                 </select>
                 <div className="buttons">
-                    <button type="button" onClick={() => navigate(-1)}>Cancel</button>
+                    <button type="button" onClick={() => navigate(`/user/event`)}>Cancel</button>
                     <button type="submit">Save</button>
                 </div>
             </form>
